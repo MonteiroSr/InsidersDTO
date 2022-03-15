@@ -1,6 +1,7 @@
 package com.exemplo.modelagem.insidersdto.controller;
 
 import com.exemplo.modelagem.insidersdto.model.Aluno;
+import com.exemplo.modelagem.insidersdto.model.DTO.AlunoDTO;
 import com.exemplo.modelagem.insidersdto.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,7 @@ public class AlunoController {
     AlunoService service;
 
     @GetMapping
-    public List<Aluno> listAll() {
+    public List<AlunoDTO> listAll() {
         return service.listAll();
     }
 

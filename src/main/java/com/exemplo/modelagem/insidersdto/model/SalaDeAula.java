@@ -1,5 +1,6 @@
 package com.exemplo.modelagem.insidersdto.model;
 
+import com.exemplo.modelagem.insidersdto.model.DTO.SalaDeAulaDTO;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,4 +19,8 @@ public class SalaDeAula {
 
     @OneToMany(mappedBy = "salaDeAula")
     private List<Aluno> listaAlunos;
+
+    public SalaDeAulaDTO toDto() {
+        return new SalaDeAulaDTO(this);
+    }
 }
