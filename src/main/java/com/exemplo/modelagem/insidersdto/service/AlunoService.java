@@ -18,13 +18,15 @@ public class AlunoService {
     AlunoRepository repository;
 
     public List<AlunoDTO> listAll() {
-        List<AlunoDTO> listaAlunos = new ArrayList<>();
+        List<AlunoDTO> alunoDTOList = new ArrayList<>();
+
         repository.findAll()
-            .forEach(aluno -> listaAlunos.add(aluno.toDto()));
-        return listaAlunos;
+                .forEach(aluno -> alunoDTOList.add(aluno.toDto()));
+
+        return alunoDTOList;
     }
 
-    public ResponseEntity<Aluno> create(Aluno aluno) {
-        return new ResponseEntity<>(repository.save(aluno), HttpStatus.CREATED);
+    public ResponseEntity<AlunoDTO> create(Aluno aluno) {
+        return new ResponseEntity<>(repository.save(aluno).toDto(), HttpStatus.CREATED);
     }
 }

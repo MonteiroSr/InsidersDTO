@@ -22,7 +22,7 @@ public class SalaDeAulacontroller {
     }
 
     @PostMapping("/nova")
-    public ResponseEntity<SalaDeAula> create(@RequestBody SalaDeAula salaDeAula) {
+    public ResponseEntity<SalaDeAulaDTO> create(@RequestBody SalaDeAula salaDeAula) {
         return service.create(salaDeAula);
     }
 }

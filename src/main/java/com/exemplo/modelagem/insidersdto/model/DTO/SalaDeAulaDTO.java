@@ -17,6 +17,6 @@ public class SalaDeAulaDTO {
         this.nomeSala = salaDeAula.getNome();
 
         salaDeAula.getListaAlunos()
-            .forEach(aluno -> nomeAlunos.add(aluno.getNome()));
+                .forEach(aluno -> this.nomeAlunos.add(aluno.getNome()));
     }
 }

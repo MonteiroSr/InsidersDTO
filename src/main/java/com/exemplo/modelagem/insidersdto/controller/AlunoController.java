@@ -22,7 +22,7 @@ public class AlunoController {
     }
 
     @PostMapping("/novo")
-    public ResponseEntity<Aluno> create(@RequestBody Aluno aluno) {
+    public ResponseEntity<AlunoDTO> create(@RequestBody Aluno aluno) {
         return service.create(aluno);
     }
 }
