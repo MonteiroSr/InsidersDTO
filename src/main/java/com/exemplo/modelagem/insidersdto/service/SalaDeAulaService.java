@@ -21,7 +21,6 @@ public class SalaDeAulaService {
         List<SalaDeAulaDTO> salaDeAulaDTOList = new ArrayList<>();
         repository.findAll()
                 .forEach(salaDeAula -> salaDeAulaDTOList.add(salaDeAula.toDto()));
-
         return salaDeAulaDTOList;
     }
 
